@@ -128,9 +128,41 @@ export const Authors = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Articles = defineDocumentType(() => ({
+  name: 'Articles',
+  filePathPattern: 'articles/**/*.json',
+  contentType: 'data',
+  fields: {
+    id: { type: 'number' },
+    date: { type: 'date' },
+    date_gmt: { type: 'date' },
+    guid: { type: 'json' },
+    modified: { type: 'date' },
+    modified_gmt: { type: 'date' },
+    slug: { type: 'string' },
+    status: { type: 'string' },
+    wp_type: { type: 'string' },
+    link: { type: 'string' },
+    title: { type: 'json' },
+    content: { type: 'json' },
+    excerpt: { type: 'json' },
+    author: { type: 'number' },
+    featured_media: { type: 'number' },
+    comment_status: { type: 'string' },
+    ping_status: { type: 'string' },
+    sticky: { type: 'boolean' },
+    template: { type: 'string' },
+    format: { type: 'string' },
+    meta: { type: 'list', of: { type: 'string' } },
+    categories: { type: 'list', of: { type: 'number' } },
+    tags: { type: 'list', of: { type: 'string' } },
+    _links: { type: 'json' },
+  },
+}))
+
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors],
+  documentTypes: [Blog, Authors, Articles],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
