@@ -20,13 +20,13 @@ async function fetchPost(postId) {
   }
   return null
 }
-const MAX_POST_ID = 1903
+const MAX_POST_ID = 2000
 
 async function main() {
   const id2tag = getIdMapping('tags')
   const id2category = getIdMapping('categories')
 
-  let n = 1154
+  let n = 1902
   while (n < MAX_POST_ID) {
     const d = await fetchPost(n)
     if (d !== null) {

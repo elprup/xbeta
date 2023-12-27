@@ -21,6 +21,7 @@ export default function BlogPage() {
 
   return (
     <ListLayout
+      groupBy="categories"
       posts={posts}
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
