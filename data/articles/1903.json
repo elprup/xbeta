@@ -27,7 +27,7 @@
   "format": "standard",
   "meta": [],
   "categories": [1],
-  "tags": [],
+  "tags": ["github", "guide"],
   "_links": {
     "self": [{ "href": "https://xbeta.info/wp-json/wp/v2/posts/1903" }],
     "collection": [{ "href": "https://xbeta.info/wp-json/wp/v2/posts" }],

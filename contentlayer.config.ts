@@ -75,8 +75,8 @@ function createSearchIndex(allBlogs) {
   }
 }
 
-export const Blog = defineDocumentType(() => ({
-  name: 'Blog',
+export const Blog2 = defineDocumentType(() => ({
+  name: 'Blog2',
   filePathPattern: 'blog/**/*.mdx',
   contentType: 'mdx',
   fields: {
@@ -128,18 +128,46 @@ export const Authors = defineDocumentType(() => ({
   computedFields,
 }))
 
-export const Articles = defineDocumentType(() => ({
-  name: 'Articles',
+const computedFields2: ComputedFields = {
+  title: { type: 'string', resolve: (doc) => doc.title.rendered },
+  lastmod: { type: 'date', resolve: (doc) => doc.modified },
+  draft: { type: 'boolean', resolve: () => false },
+  summary: { type: 'string', resolve: () => '' },
+  images: { type: 'json', resolve: () => {} },
+  authors: { type: 'list', resolve: () => [] },
+  layout: { type: 'string', resolve: () => '' },
+  bibliography: { type: 'string', resolve: () => '' },
+  canonicalUrl: { type: 'string', resolve: () => '' },
+  body: { type: 'json', resolve: (doc) => ({ html: doc.content.rendered }) },
+
+  readingTime: { type: 'json', resolve: (doc) => readingTime(doc.content.rendered) },
+  slug: {
+    type: 'string',
+    resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
+  },
+  path: {
+    type: 'string',
+    resolve: (doc) => doc._raw.flattenedPath,
+  },
+  filePath: {
+    type: 'string',
+    resolve: (doc) => doc._raw.sourceFilePath,
+  },
+  toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.content.rendered) },
+}
+
+export const Blog = defineDocumentType(() => ({
+  name: 'Blog',
   filePathPattern: 'articles/**/*.json',
   contentType: 'data',
   fields: {
     id: { type: 'number' },
-    date: { type: 'date' },
+    date: { type: 'date', required: true },
     date_gmt: { type: 'date' },
     guid: { type: 'json' },
     modified: { type: 'date' },
     modified_gmt: { type: 'date' },
-    slug: { type: 'string' },
+    slug: { type: 'string', required: true },
     status: { type: 'string' },
     wp_type: { type: 'string' },
     link: { type: 'string' },
@@ -158,11 +186,12 @@ export const Articles = defineDocumentType(() => ({
     tags: { type: 'list', of: { type: 'string' } },
     _links: { type: 'json' },
   },
+  computedFields: computedFields2,
 }))
 
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, Articles],
+  documentTypes: [Blog, Authors, Blog2],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
