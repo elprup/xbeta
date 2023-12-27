@@ -158,7 +158,7 @@ const computedFields2: ComputedFields = {
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
-  filePathPattern: 'articles/**/*.json',
+  filePathPattern: 'blog/**/*.json',
   contentType: 'data',
   fields: {
     id: { type: 'number' },
