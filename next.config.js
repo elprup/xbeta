@@ -82,6 +82,7 @@ module.exports = () => {
       ]
     },
     basePath: '/xbeta',
+    output: 'export',
     webpack: (config, options) => {
       config.module.rules.push({
         test: /\.svg$/,
