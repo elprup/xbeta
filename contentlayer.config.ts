@@ -45,11 +45,11 @@ const computedFields: ComputedFields = {
 /**
  * Count the occurrences of all tags across blog posts and write to json file
  */
-function createTagCount(allBlogs) {
+function createCount(name, names, allBlogs) {
   const tagCount: Record<string, number> = {}
   allBlogs.forEach((file) => {
-    if (file.tags && (!isProduction || file.draft !== true)) {
-      file.tags.forEach((tag) => {
+    if (file[names] && (!isProduction || file.draft !== true)) {
+      file[names].forEach((tag) => {
         const formattedTag = GithubSlugger.slug(tag)
         if (formattedTag in tagCount) {
           tagCount[formattedTag] += 1
@@ -59,7 +59,7 @@ function createTagCount(allBlogs) {
       })
     }
   })
-  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount))
+  writeFileSync(`./app/${name}-data.json`, JSON.stringify(tagCount))
 }
 
 function createSearchIndex(allBlogs) {
@@ -212,7 +212,8 @@ export default makeSource({
   },
   onSuccess: async (importData) => {
     const { allBlogs } = await importData()
-    createTagCount(allBlogs)
+    createCount('tag', 'tags', allBlogs)
+    createCount('category', 'categories', allBlogs)
     createSearchIndex(allBlogs)
   },
 })

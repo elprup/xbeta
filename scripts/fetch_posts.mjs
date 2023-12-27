@@ -1,9 +1,9 @@
 import fs from 'fs'
 
-function getIdTagMapping() {
+function getIdMapping(names) {
   const result = {}
-  fs.readdirSync('./data/tags').forEach((file) => {
-    const content = fs.readFileSync('./data/tags/' + file)
+  fs.readdirSync('./data/' + names).forEach((file) => {
+    const content = fs.readFileSync(`./data/${names}/${file}`)
     const data = JSON.parse(content)
     result[data.id.toString()] = data.name
   })
@@ -23,16 +23,24 @@ async function fetchPost(postId) {
 const MAX_POST_ID = 1903
 
 async function main() {
-  const id2tag = getIdTagMapping()
-  let n = 1
+  const id2tag = getIdMapping('tags')
+  const id2category = getIdMapping('categories')
+
+  let n = 1154
   while (n < MAX_POST_ID) {
     const d = await fetchPost(n)
     if (d !== null) {
       d['wp_type'] = d['type']
       delete d['type']
+
       const newTag = d.tags.map((i) => id2tag[i.toString()] || '').filter((i) => i != '')
       newTag.push('all')
       d.tags = newTag
+
+      const newCategories = d.categories
+        .map((i) => id2category[i.toString()] || '')
+        .filter((i) => i != '')
+      d.categories = newCategories
       fs.writeFileSync(`./data/blog/${n}.json`, JSON.stringify(d))
     }
     n += 1

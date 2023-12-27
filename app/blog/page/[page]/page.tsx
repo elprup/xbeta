@@ -25,6 +25,7 @@ export default function Page({ params }: { params: { page: string } }) {
 
   return (
     <ListLayout
+      groupBy="categories"
       posts={posts}
       initialDisplayPosts={initialDisplayPosts}
       pagination={pagination}
