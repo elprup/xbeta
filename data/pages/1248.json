@@ -1,0 +1,43 @@
+{
+  "id": 1248,
+  "date": "2011-03-10T13:01:58",
+  "date_gmt": "2011-03-10T05:01:58",
+  "guid": { "rendered": "http://xbeta.info/?page_id=1248" },
+  "modified": "2011-03-10T13:01:58",
+  "modified_gmt": "2011-03-10T05:01:58",
+  "slug": "contact",
+  "status": "publish",
+  "wp_type": "page",
+  "link": "https://xbeta.info/contact",
+  "title": { "rendered": "联系方式｜contact xbeta" },
+  "content": {
+    "rendered": "<h2>联系方式｜contact xbeta</h2>\n<p>1. 电子邮件：<a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#120;b&#101;&#0116;&#97;&#64;&#49;&#54;&#51;&#046;&#99;&#111;&#0109;\">&#120;b&#101;<span style=\"display:none\">xbeta.zhenmuyou@gmail.com</span>&#0116;&#097;&#64;&#49;&#54;&#051;&#46;&#099;&#111;&#0109;</a><br />\n2. 新浪微博：<a title=\"新浪微博 sina weibo msg @善用佳软\" href=\"http://weibo.com/xbeta\">@善用佳软</a></p>\n<h2>注意事项</h2>\n<p>大多数软件、技术问题，请通过<strong>公开</strong>方式，比如博客评论、微博评论进行联系。<br />\n这样，更多人看到问题，或许会代为回答，得到答复和解决的概率比只发给我更大。问题的答案，也对更多人有参考价值。<br />\n注意：请在<strong>相关</strong>的博客/微博后面添加评论（我能<strong>及时</strong>看到），而不要在无关的最新文章/微博上评论，<strong>勿重复评论</strong>。</p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>联系方式｜contact xbeta 1. 电子邮件：&#120;b&#101;xbeta.zhenmuyou [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": [],
+  "_links": {
+    "self": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages/1248" }],
+    "collection": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages" }],
+    "about": [{ "href": "https://xbeta.info/wp-json/wp/v2/types/page" }],
+    "author": [{ "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/users/2" }],
+    "replies": [
+      { "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/comments?post=1248" }
+    ],
+    "version-history": [
+      { "count": 0, "href": "https://xbeta.info/wp-json/wp/v2/pages/1248/revisions" }
+    ],
+    "wp:attachment": [{ "href": "https://xbeta.info/wp-json/wp/v2/media?parent=1248" }],
+    "curies": [{ "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }]
+  }
+}

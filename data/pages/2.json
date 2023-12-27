@@ -1,0 +1,41 @@
+{
+  "id": 2,
+  "date": "2017-02-14T22:55:53",
+  "date_gmt": "2017-02-14T14:55:53",
+  "guid": { "rendered": "https://xbeta.info/?page_id=2" },
+  "modified": "2017-02-14T22:55:53",
+  "modified_gmt": "2017-02-14T14:55:53",
+  "slug": "sample-page",
+  "status": "publish",
+  "wp_type": "page",
+  "link": "https://xbeta.info/sample-page",
+  "title": { "rendered": "示例页面" },
+  "content": {
+    "rendered": "<p>这是一个范例页面。它和博客文章不同，因为它的页面位置是固定的，同时会显示于您的博客导航栏（大多数主题中）。大多数人会新增一个“关于”页面向访客介绍自己。它可能类似下面这样：</p>\n<blockquote><p>我是一个很有趣的人，我创建了工厂和庄园。并且，顺便提一下，我的妻子也很好。</p></blockquote>\n<p>……或下面这样：</p>\n<blockquote><p>XYZ装置公司成立于1971年，公司成立以来，我们一直向市民提供高品质的装置。我们位于北京市，有超过2,000名员工，对北京市有着相当大的贡献。</p></blockquote>\n<p>作为一个新的WordPress用户，您可以前往<a href=\"https://xbeta.info/wp-admin/\">您的仪表盘</a>删除这个页面，并建立属于您的全新内容。祝您使用愉快！</p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>这是一个范例页面。它和博客文章不同，因为它的页面位置是固定的，同时会显示于您的博客导航栏（大多数主题中）。大多 [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 1,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "open",
+  "template": "",
+  "meta": [],
+  "_links": {
+    "self": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages/2" }],
+    "collection": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages" }],
+    "about": [{ "href": "https://xbeta.info/wp-json/wp/v2/types/page" }],
+    "author": [{ "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/users/1" }],
+    "replies": [{ "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/comments?post=2" }],
+    "version-history": [
+      { "count": 0, "href": "https://xbeta.info/wp-json/wp/v2/pages/2/revisions" }
+    ],
+    "wp:attachment": [{ "href": "https://xbeta.info/wp-json/wp/v2/media?parent=2" }],
+    "curies": [{ "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }]
+  }
+}

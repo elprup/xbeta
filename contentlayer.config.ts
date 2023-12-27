@@ -189,9 +189,41 @@ export const Blog = defineDocumentType(() => ({
   computedFields: computedFields2,
 }))
 
+export const Pages = defineDocumentType(() => ({
+  name: 'Pages',
+  filePathPattern: 'pages/**/*.json',
+  contentType: 'data',
+  fields: {
+    id: { type: 'number' },
+    date: { type: 'date', required: true },
+    date_gmt: { type: 'date' },
+    guid: { type: 'json' },
+    modified: { type: 'date' },
+    modified_gmt: { type: 'date' },
+    slug: { type: 'string', required: true },
+    status: { type: 'string' },
+    wp_type: { type: 'string' },
+    link: { type: 'string' },
+    title: { type: 'json' },
+    content: { type: 'json' },
+    excerpt: { type: 'json' },
+    author: { type: 'number' },
+    featured_media: { type: 'number' },
+    comment_status: { type: 'string' },
+    ping_status: { type: 'string' },
+    template: { type: 'string' },
+    format: { type: 'string' },
+    parent: { type: 'number' },
+    menu_order: { type: 'number' },
+    meta: { type: 'list', of: { type: 'string' } },
+    _links: { type: 'json' },
+  },
+  computedFields: computedFields2,
+}))
+
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, Blog2],
+  documentTypes: [Blog, Authors, Blog2, Pages],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [

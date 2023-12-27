@@ -1,0 +1,37 @@
+{
+  "id": 346,
+  "date": "2008-01-18T17:01:01",
+  "date_gmt": "2008-01-18T09:01:01",
+  "guid": { "rendered": "http://blog.xbeta.info/archives" },
+  "modified": "2008-01-18T17:01:01",
+  "modified_gmt": "2008-01-18T09:01:01",
+  "slug": "archives",
+  "status": "publish",
+  "wp_type": "page",
+  "link": "https://xbeta.info/archives",
+  "title": { "rendered": "存档" },
+  "content": { "rendered": "", "protected": false },
+  "excerpt": { "rendered": "", "protected": false },
+  "author": 15,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "page-archives.php",
+  "meta": [],
+  "_links": {
+    "self": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages/346" }],
+    "collection": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages" }],
+    "about": [{ "href": "https://xbeta.info/wp-json/wp/v2/types/page" }],
+    "author": [{ "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/users/15" }],
+    "replies": [
+      { "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/comments?post=346" }
+    ],
+    "version-history": [
+      { "count": 0, "href": "https://xbeta.info/wp-json/wp/v2/pages/346/revisions" }
+    ],
+    "wp:attachment": [{ "href": "https://xbeta.info/wp-json/wp/v2/media?parent=346" }],
+    "curies": [{ "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }]
+  }
+}

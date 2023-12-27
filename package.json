@@ -8,6 +8,7 @@
     "fetch:post": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/fetch_posts.mjs",
     "fetch:tags": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/fetch_tags.mjs",
     "fetch:categories": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/fetch_categories.mjs",
+    "fetch:pages": "cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/fetch_pages.mjs",
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",

@@ -1,0 +1,43 @@
+{
+  "id": 1069,
+  "date": "2010-06-13T11:35:12",
+  "date_gmt": "2010-06-13T03:35:12",
+  "guid": { "rendered": "http://xbeta.info/?page_id=1069" },
+  "modified": "2010-06-13T11:35:12",
+  "modified_gmt": "2010-06-13T03:35:12",
+  "slug": "about",
+  "status": "publish",
+  "wp_type": "page",
+  "link": "https://xbeta.info/about",
+  "title": { "rendered": "about" },
+  "content": {
+    "rendered": "<h2 id=\"toc1\">善用佳软简介</h2>\n<div id=\"hcard-xbeta\" class=\"vcard\"><a class=\"url fn n\" href=\"http://xbeta.info\"><span class=\"given-name\">xbeta</span></a>，<span class=\"org\">“善用佳软”博客</span>作者。位于<span class=\"adr\"><span class=\"country-name\">中国</span><span class=\"locality\">北京</span></span>。</div>\n<p>善用佳软=(善意+善于)应用优秀软件。目标是分享“替代盗版，提升效率”的经验。</p>\n<p>xbeta=x(未知数)+β(测试版,改进)=谦卑开放的心态+奋力改进的行为。读音“爱科思-贝塔”，大家也可以称呼我善用佳软。</p>\n<p>善用佳软的域名为<a href=\"http://xbeta.info\">http://xbeta.info</a>，此外还有很多旧文章发在 <a title=\"善用佳软（旧）：不再发表新文章，但旧文仍在更新\" href=\"http://blog.sina.com.cn/xbeta\" target=\"_blank\">http://blog.sina.com.cn/xbeta</a>。</p>\n<h2 id=\"content\">善用佳软的主要内容</h2>\n<p>最经典<a href=\"http://zh.wikipedia.org/wiki/%E5%85%8D%E8%B4%B9%E8%BD%AF%E4%BB%B6\">免费软件</a>（<a href=\"http://en.wikipedia.org/wiki/Freeware\">freeware</a>），最实用软件技巧。<br />\n除了 Total Commander外，其他推荐软件都是freeware。以工作相关软件为主，娱乐游戏基本不涉及。所介绍软件都是windows下的（当然很多软件本 身是跨平台的），简要清单可参见<a href=\"http://blog.sina.com.cn/u/46dac66f0100003u\" target=\"_blank\">xbeta精心荐精品之免费软件列表</a>。以前用过的这个签名档也有代表意义：</p>\n<p style=\"margin-left: 40px;\">迎娶免费佳软 IrfanView 7zip gVIM GIMP PDFCreator<br />\n何必盗香窃玉 ACDSee WinRar/WinZip UltraEdit PhotoShop Acrobat<br />\n再加四种精品 Audacity录音 Wink录屏做教程 OpenOffice办公 极点五笔打字<br />\n工作高效惬意 Total Commander(shareware)<br />\n—— xbeta（免费软件义工）</p>\n<h2 id=\"soft-rule\">软件选取原则</h2>\n<p>免费软件中，选择本类别中功能/性能最好的；如果接近，则体积小者优先；有流氓行为者排除；久经考验者优先；国内外软件一视同仁（从数量看本站介绍的国外软件更多）</p>\n<h2 id=\"license\">文章版权/许可</h2>\n<p>[2010-10-15更新]<br />\n自即日起，本站由xbeta原创的内容，采用创作共用组织（Creative Commons）的“公共领域”（<a href=\"http://creativecommons.org/about/pdm\">Public Domain</a>）许可。即放弃一切权利，全归公共领域。但涉及到其他版权人的摘录、转载、投稿、翻译类内容不在此列。<br />\n此前本站号称采用 CC创用共享协议之“<a href=\"http://creativecommons.org/licenses/by-nc-sa/2.5/cn/deed.zh\" target=\"_blank\">署名-非商业-相同方式分享</a> 2.5”，但又做了如下说明。所以，实际上并没有实质性变化。<br />\n至于是否署名、保留出处，可根据各自需求、读者需求自行确定。</p>\n<blockquote><p>虽然出于简单，本博客引用了CC创作共用协议，但实际能接受的行为比CC更加开放。<br />\n我可以接受的情况有：<br />\n&#8211; 商业转载，不联系，不付费。<br />\n&#8211; 个人转载，不联系，不署名。<br />\n&#8211; 全站镜像，加广告。<br />\n&#8211; 拿我的文章出书。<br />\n当然，我的建议（不是要求）还是“署名并保留出处”，再降一步是“保留出处”——因为我的文章会不时更新。您保留了出处，会方便读者获取新信息或参与讨论。<br />\n关于网站镜像（比如同步到其他BSP），我现在出于安全考虑，认为是值得提倡的。欢迎有兴趣的网友联系。</p></blockquote>\n<h2><strong>xbeta简历</strong></h2>\n<p>以下内容用<a href=\"http://microformats.org/\">微格式（microformats）</a>事件表述。</p>\n<div id=\"hcalendar-接触计算机\" class=\"vevent\"><abbr class=\"dtstart\" title=\"1993-09-01\">1993</abbr>：<span class=\"summary\">开始接触计算机</span></div>\n<div id=\"hcalendar-克制\" class=\"vevent\"><abbr class=\"dtstart\" title=\"1993-09-01\">1993</abbr>&#8211;<abbr class=\"dtend\" title=\"1998-07-01\">1998</abbr>：<span class=\"summary\">克制对软件的兴趣，不主动关注，有问题可随时问身边的高手</span></div>\n<div id=\"hcalendar-关注\" class=\"vevent\"><abbr class=\"dtstart\" title=\"1998-09-01\">1998</abbr>：<span class=\"summary\">学习、工作环境改变。同学同事有问题会来问我，于是主动关注软件。</span></div>\n<div id=\"hcalendar-正版\" class=\"vevent\"><abbr class=\"dtstart\" title=\"2005-08-31\">2005.08</abbr>：<span class=\"summary\">开始第2次不使用盗版的尝试，用免费软件替换了becky、UltraEdit、PDFfactory、PhotoShop、WinRar；注册了Total Commander，实现了全部软件合法化。</span></div>\n<div id=\"hcalendar-sina-blog\" class=\"vevent\"><abbr class=\"dtstart\" title=\"2005-10-01\">2005.10</abbr>：<span class=\"summary\">在sina开博，分享软件经验。名称：“善用佳软:精品免费软件”，网址：http://blog.sina.com.cn/xbeta。</span></div>\n<div id=\"hcalendar-TC版主\" class=\"vevent\"><abbr class=\"dtstart\" title=\"2006-01-01\">2006.01</abbr>&#8211;<abbr class=\"dtend\" title=\"2007-01-02\">2007.01</abbr>：<span class=\"summary\">担任水木社区Total Commander版版主，期间组织TC团购等活动，并更改版规禁止讨论破解。</span></div>\n<div id=\"hcalendar-old-xbeta.info\" class=\"vevent\"><abbr class=\"dtstart\" title=\"2007-07-01\">2007</abbr>：<span class=\"summary\">从Godaddy购买域名xbeta.info；从盘古购买空间，把一些不适合blog的内容（主要是英文软件主页翻译）上传。</span></div>\n<div id=\"hcalendar-wp-xbeta.info\" class=\"vevent\"><abbr class=\"dtstart\" title=\"2008-03-01\">2008.03</abbr>：<span class=\"summary\"><a class=\"url\" href=\"http://xbeta.info/new-blog.htm\">改为WordPress平台独立博客</a>。感谢小众软件、CPH。</span></div>\n<p>2010.01：善用佳软入选 sohu <a href=\"http://it.sohu.com/20100121/n269750413.shtml\">2009年度优秀独立博客</a><br />\n※再附一个微格式地点的例子：</p>\n<div class=\"geo\">北京：<span class=\"latitude\">39.90556</span>；<span class=\"longitude\">116.39139</span></div>\n<h2>鸣谢：</h2>\n<p>感谢小众软件提供技术支持，感谢众多网友对文章、软件的指正。<br />\n博客写作和维护用到了下述软件：极点五笔、Firefox、gVim、KompoZer、IrfanView、Total Commander等。</p>\n<p id=\"contact\"><a href=\"http://xbeta.info/contact\">联系xbeta</a></p>\n<p></iframe></p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>善用佳软简介 xbeta，“善用佳软”博客作者。位于中国北京。 善用佳软=(善意+善于)应用优秀软件。目标是分 [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": [],
+  "_links": {
+    "self": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages/1069" }],
+    "collection": [{ "href": "https://xbeta.info/wp-json/wp/v2/pages" }],
+    "about": [{ "href": "https://xbeta.info/wp-json/wp/v2/types/page" }],
+    "author": [{ "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/users/2" }],
+    "replies": [
+      { "embeddable": true, "href": "https://xbeta.info/wp-json/wp/v2/comments?post=1069" }
+    ],
+    "version-history": [
+      { "count": 0, "href": "https://xbeta.info/wp-json/wp/v2/pages/1069/revisions" }
+    ],
+    "wp:attachment": [{ "href": "https://xbeta.info/wp-json/wp/v2/media?parent=1069" }],
+    "curies": [{ "name": "wp", "href": "https://api.w.org/{rel}", "templated": true }]
+  }
+}

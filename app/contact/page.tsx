@@ -7,7 +7,7 @@ import { genPageMetadata } from 'app/seo'
 export const metadata = genPageMetadata({ title: 'About' })
 
 export default function Page() {
-  const author = allPages.find((p) => p.id === 1069) as Pages
+  const author = allPages.find((p) => p.id === 1248) as Pages
   const mainContent = coreContent(author)
 
   return (
