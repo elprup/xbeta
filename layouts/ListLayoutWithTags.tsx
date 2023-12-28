@@ -11,6 +11,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
 import categoryData from 'app/category-data.json'
+import categoryConfig from 'app/category-config.json'
 
 interface PaginationProps {
   totalPages: number
@@ -77,9 +78,37 @@ export default function ListLayoutWithTags({
       ? (tagData as Record<string, number>)
       : (categoryData as Record<string, number>)
   const tagKeys = Object.keys(tagCounts)
-  let sortedTags = tagKeys.sort((a, b) => (a < b ? -1 : 1))
+
+  let sortedTags = tagKeys.map((i) => ({
+    name: i,
+    count: tagCounts[i],
+    display: i,
+    intent: 0,
+    seq: 0,
+  }))
   if (groupBy === 'tags') {
-    sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
+    sortedTags = sortedTags.sort((a, b) => b.count - a.count)
+  } else if (groupBy === 'categories') {
+    sortedTags = tagKeys.map((i) => {
+      if (categoryConfig[i] == undefined) {
+        return {
+          name: i,
+          count: tagCounts[i],
+          display: i,
+          intent: 0,
+          seq: 99,
+        }
+      }
+      return {
+        name: i,
+        count: tagCounts[i],
+        display: categoryConfig[i][0],
+        intent: categoryConfig[i][2],
+        seq: categoryConfig[i][1],
+      }
+    })
+
+    sortedTags = sortedTags.sort((a, b) => a.seq - b.seq)
   }
 
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
@@ -112,17 +141,27 @@ export default function ListLayoutWithTags({
                 {sortedTags.map((t) => {
                   return (
                     <li key={t} className="my-3">
-                      {pathname.split(`/${groupBy}/`)[1] === encodeURI(slug(t)) ? (
-                        <h3 className="inline px-3 py-2 text-sm font-bold uppercase text-primary-500">
-                          {`${t} (${tagCounts[t]})`}
+                      {pathname.split(`/${groupBy}/`)[1] === encodeURI(slug(t.name)) ? (
+                        <h3
+                          className={
+                            t.intent == 1
+                              ? 'ml-3 inline px-3 py-2 text-sm font-bold uppercase text-primary-500'
+                              : 'inline px-3 py-2 text-sm font-bold uppercase text-primary-500'
+                          }
+                        >
+                          {`${t.display} (${t.count})`}
                         </h3>
                       ) : (
                         <Link
-                          href={`/${groupBy}/${slug(t)}`}
-                          className="px-3 py-2 text-sm font-medium uppercase text-gray-500 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
-                          aria-label={`View posts tagged ${t}`}
+                          href={`/${groupBy}/${slug(t.name)}`}
+                          className={
+                            t.intent == 1
+                              ? 'ml-3 px-3 py-2 text-sm font-medium uppercase text-gray-500 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500'
+                              : 'px-3 py-2 text-sm font-medium uppercase text-gray-500 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500'
+                          }
+                          aria-label={`View posts tagged ${t.display}`}
                         >
-                          {`${t} (${tagCounts[t]})`}
+                          {`${t.display} (${t.count})`}
                         </Link>
                       )}
                     </li>
