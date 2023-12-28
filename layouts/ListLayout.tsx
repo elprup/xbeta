@@ -35,12 +35,12 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {prevPage && (
-          <Link
+          <a
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
           >
             Previous
-          </Link>
+          </a>
         )}
         <span>
           {currentPage} of {totalPages}
@@ -51,9 +51,9 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {nextPage && (
-          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+          <a href={`/${basePath}/page/${currentPage + 1}`} rel="next">
             Next
-          </Link>
+          </a>
         )}
       </nav>
     </div>
@@ -126,9 +126,9 @@ export default function ListLayout({
                   <div className="space-y-3 xl:col-span-3">
                     <div>
                       <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                        <a href={`/${path}`} className="text-gray-900 dark:text-gray-100">
                           {title}
-                        </Link>
+                        </a>
                       </h3>
                       <div className="flex flex-wrap">
                         {tags?.map((tag) => <Tag key={tag} text={tag} />)}

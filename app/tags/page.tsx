@@ -24,13 +24,13 @@ export default async function Page() {
             return (
               <div key={t} className="mb-2 mr-5 mt-2">
                 <Tag text={t} />
-                <Link
+                <a
                   href={`/tags/${slug(t)}`}
                   className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
                   aria-label={`View posts tagged ${t}`}
                 >
                   {` (${tagCounts[t]})`}
-                </Link>
+                </a>
               </div>
             )
           })}
