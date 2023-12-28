@@ -81,7 +81,7 @@ module.exports = () => {
         },
       ]
     },
-    basePath: '/xbeta',
+    basePath: process.env.DEV_MODE === '1' ? '' : '/xbeta',
     output: 'export',
     webpack: (config, options) => {
       config.module.rules.push({

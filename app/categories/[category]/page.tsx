@@ -29,7 +29,7 @@ export const generateStaticParams = async () => {
   const tagCounts = categoryData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const paths = tagKeys.map((category) => ({
-    category: category,
+    category: process.env.DEV_MODE === '1' ? encodeURI(category) : category,
   }))
   return paths
 }
