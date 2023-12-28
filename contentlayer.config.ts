@@ -21,6 +21,7 @@ import rehypePrismPlus from 'rehype-prism-plus'
 import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
+import { convert } from 'html-to-text'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -132,7 +133,7 @@ const computedFields2: ComputedFields = {
   title: { type: 'string', resolve: (doc) => doc.title.rendered },
   lastmod: { type: 'date', resolve: (doc) => doc.modified },
   draft: { type: 'boolean', resolve: () => false },
-  summary: { type: 'string', resolve: () => '' },
+  summary: { type: 'string', resolve: (doc) => convert(doc.excerpt.rendered) },
   images: { type: 'json', resolve: () => {} },
   authors: { type: 'list', resolve: () => [] },
   layout: { type: 'string', resolve: () => '' },
