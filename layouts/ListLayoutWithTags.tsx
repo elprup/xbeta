@@ -140,7 +140,7 @@ export default function ListLayoutWithTags({
               <ul>
                 {sortedTags.map((t) => {
                   return (
-                    <li key={t} className="my-3">
+                    <li key={t.name} className="my-3">
                       {pathname.split(`/${groupBy}/`)[1] === encodeURI(slug(t.name)) ? (
                         <h3
                           className={
