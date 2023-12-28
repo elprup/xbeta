@@ -77,9 +77,16 @@ export default function ListLayoutWithTags({
       ? (tagData as Record<string, number>)
       : (categoryData as Record<string, number>)
   const tagKeys = Object.keys(tagCounts)
-  const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
+  let sortedTags = tagKeys.sort((a, b) => (a < b ? -1 : 1))
+  if (groupBy === 'tags') {
+    sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
+  }
 
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
+  let sidebarTitle = '分类导航'
+  if (groupBy === 'tags') {
+    sidebarTitle = '标签'
+  }
   return (
     <>
       <div>
@@ -92,13 +99,13 @@ export default function ListLayoutWithTags({
           <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
-                <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
+                <h3 className="font-bold uppercase text-primary-500">{sidebarTitle}</h3>
               ) : (
                 <Link
                   href={`/blog`}
                   className="font-bold uppercase text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
                 >
-                  All Posts
+                  {sidebarTitle}
                 </Link>
               )}
               <ul>
