@@ -77,12 +77,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <dt className="sr-only">Twitter</dt>
                         <dd>
                           {author.twitter && (
-                            <a
+                            <Link
                               href={author.twitter}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
                               {author.twitter.replace('https://twitter.com/', '@')}
-                            </a>
+                            </Link>
                           )}
                         </dd>
                       </dl>
@@ -94,11 +94,11 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
               <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
-                {/* <a href={discussUrl(path)} rel="nofollow">
+                {/* <Link href={discussUrl(path)} rel="nofollow">
                   Discuss on Twitter
-                </a>
+                </Link>
                 {` • `} */}
-                <a href={editUrl(filePath)}>View on GitHub</a>
+                <Link href={editUrl(filePath)}>View on GitHub</Link>
               </div>
               {siteMetadata.comments && (
                 <div
@@ -131,7 +131,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                           上一篇
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <a href={`/${prev.path}`}>{prev.title}</a>
+                          <Link href={`/${prev.path}`}>{prev.title}</Link>
                         </div>
                       </div>
                     )}
@@ -141,7 +141,7 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                           下一篇
                         </h2>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
-                          <a href={`/${next.path}`}>{next.title}</a>
+                          <Link href={`/${next.path}`}>{next.title}</Link>
                         </div>
                       </div>
                     )}
@@ -149,13 +149,13 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                 )}
               </div>
               <div className="pt-4 xl:pt-8">
-                <a
+                <Link
                   href={`/${basePath}`}
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                   aria-label="Back to the blog"
                 >
                   &larr; 回到文章列表
-                </a>
+                </Link>
               </div>
             </footer>
           </div>

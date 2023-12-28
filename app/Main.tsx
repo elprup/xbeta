@@ -36,9 +36,12 @@ export default function Home({ posts }) {
                       <div className="space-y-6">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <a href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
+                            <Link
+                              href={`/blog/${slug}`}
+                              className="text-gray-900 dark:text-gray-100"
+                            >
                               {title}
-                            </a>
+                            </Link>
                           </h2>
                           <div className="flex flex-wrap">
                             {tags.map((tag) => (
@@ -51,13 +54,13 @@ export default function Home({ posts }) {
                         </div>
                       </div>
                       <div className="text-base font-medium leading-6">
-                        <a
+                        <Link
                           href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read more: "${title}"`}
                         >
                           阅读更多 &rarr;
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -69,13 +72,13 @@ export default function Home({ posts }) {
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
-          <a
+          <Link
             href="/blog"
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
             aria-label="All posts"
           >
             所有文章 &rarr;
-          </a>
+          </Link>
         </div>
       )}
       {siteMetadata.newsletter?.provider && (

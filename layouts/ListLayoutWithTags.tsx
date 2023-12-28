@@ -40,12 +40,12 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {prevPage && (
-          <a
+          <Link
             href={currentPage - 1 === 1 ? `/${basePath}/` : `/${basePath}/page/${currentPage - 1}`}
             rel="prev"
           >
             Previous
-          </a>
+          </Link>
         )}
         <span>
           {currentPage} of {totalPages}
@@ -56,9 +56,9 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
           </button>
         )}
         {nextPage && (
-          <a href={`/${basePath}/page/${currentPage + 1}`} rel="next">
+          <Link href={`/${basePath}/page/${currentPage + 1}`} rel="next">
             Next
-          </a>
+          </Link>
         )}
       </nav>
     </div>
@@ -130,12 +130,12 @@ export default function ListLayoutWithTags({
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase text-primary-500">{sidebarTitle}</h3>
               ) : (
-                <a
+                <Link
                   href={`/blog`}
                   className="font-bold uppercase text-gray-700 hover:text-primary-500 dark:text-gray-300 dark:hover:text-primary-500"
                 >
                   {sidebarTitle}
-                </a>
+                </Link>
               )}
               <ul>
                 {sortedTags.map((t) => {
@@ -152,7 +152,7 @@ export default function ListLayoutWithTags({
                           {`${t.display} (${t.count})`}
                         </h3>
                       ) : (
-                        <a
+                        <Link
                           href={`/${groupBy}/${slug(t.name)}`}
                           className={
                             t.intent == 1
@@ -162,7 +162,7 @@ export default function ListLayoutWithTags({
                           aria-label={`View posts tagged ${t.display}`}
                         >
                           {`${t.display} (${t.count})`}
-                        </a>
+                        </Link>
                       )}
                     </li>
                   )
@@ -186,9 +186,9 @@ export default function ListLayoutWithTags({
                       <div className="space-y-3">
                         <div>
                           <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <a href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
                               {title}
-                            </a>
+                            </Link>
                           </h2>
                           <div className="flex flex-wrap">
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}

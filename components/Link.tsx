@@ -8,7 +8,7 @@ const CustomLink = ({ href, ...rest }: LinkProps & AnchorHTMLAttributes<HTMLAnch
   const isAnchorLink = href && href.startsWith('#')
 
   if (isInternalLink) {
-    return <a href={href} {...rest} />
+    return <Link href={href} {...rest} />
   }
 
   if (isAnchorLink) {
